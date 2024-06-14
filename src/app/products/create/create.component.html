@@ -1,0 +1,20 @@
+<!-- src/app/products/create/create.component.html -->
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <label>Comercial Name:</label>
+    <input formControlName="comercial_name" nz-input />
+  
+    <label>Description:</label>
+    <input formControlName="description" nz-input />
+  
+    <label>Model:</label>
+    <input formControlName="model" nz-input />
+  
+    <label>Stock:</label>
+    <input formControlName="stock" type="number" nz-input />
+  
+    <label>Price:</label>
+    <input formControlName="price" type="number" nz-input />
+  
+    <button nz-button nzType="primary" type="submit">Create Product</button>
+  </form>
+  

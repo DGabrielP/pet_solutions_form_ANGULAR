@@ -1,0 +1,27 @@
+<!-- src/app/products/list/list.component.html -->
+<nz-table #basicTable [nzData]="products" nzBordered>
+    <thead>
+      <tr>
+        <th>Comercial Name</th>
+        <th>Description</th>
+        <th>Model</th>
+        <th>Stock</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.comercial_name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.model }}</td>
+        <td>{{ product.stock }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <button nz-button nzType="primary">Edit</button>
+          <button nz-button nzType="danger" (click)="deleteProduct(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+  
